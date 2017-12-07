@@ -1,0 +1,26 @@
+{
+  "main": {
+    "weddings": [{
+      "header": "Свадьба Тамары и Кирилла",
+      "description": "Место проведения: яхт-клуб «Водник»",
+      "image": "https://dummyimage.com/960x600/111/0edeed&text=whatsup",
+      "small": false
+    },
+      {
+        "header": "Свадьба Дарьи и Дмитрия",
+        "image": "https://dummyimage.com/960x600/111/0edeed&text=whatsup",
+        "small": true
+      },
+      {
+        "header": "Свадьба Александры и Александра",
+        "image": "https://dummyimage.com/960x600/111/0edeed&text=whatsup",
+        "small": true
+      }
+    ],
+    "social": {
+      "facebook": "https://www.facebook.com/groups/1831571563758439/about/",
+      "instagram": "https://www.instagram.com/tyulkanova.flowers/",
+      "vk": "https://vk.com/tyulkanovaflowers"
+    }
+  }
+}

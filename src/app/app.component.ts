@@ -1,6 +1,5 @@
 import {
   Component,
-  OnInit,
   ViewEncapsulation
 } from '@angular/core';
 
@@ -12,10 +11,6 @@ import {
     'app.style.less'
   ],
 })
-export class AppComponent implements OnInit {
-
-  ngOnInit() {
-    // console.log(window.database);
-  }
+export class AppComponent {
 
 }

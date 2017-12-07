@@ -43,7 +43,9 @@ module.exports = {
     /**
      * <link> tags for a Web App Manifest
      */
-    { rel: 'manifest', href: '/assets/manifest.json' }
+    { rel: 'manifest', href: '/assets/manifest.json' },
+    {rel: 'style sheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i'},
+    {rel: 'style sheet', href: 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i&amp;subset=cyrillic'}
   ],
   meta: [
     { name: 'msapplication-TileColor', content: '#00bcd4' },
