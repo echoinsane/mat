@@ -10,10 +10,8 @@ import {
   createNewHosts,
   createInputTransfer
 } from '@angularclass/hmr';
-import {
-  RouterModule,
-  PreloadAllModules
-} from '@angular/router';
+import {RouterModule} from '@angular/router';
+import {MainModule} from "./main/main.module";
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -24,10 +22,10 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { HomeComponent } from './home';
-import { AboutComponent } from './about';
-import { NoContentComponent } from './no-content';
-import { XLargeDirective } from './home/x-large';
+import {HeaderComponent} from './header/header.component';
+import {AboutComponent} from './about/about.component';
+import {ContactComponent} from './contact/contact.component';
+import {FooterComponent} from "./footer/footer.component";
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -51,10 +49,10 @@ type StoreType = {
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
+    HeaderComponent,
     AboutComponent,
-    HomeComponent,
-    NoContentComponent,
-    XLargeDirective
+    ContactComponent,
+    FooterComponent
   ],
   /**
    * Import Angular's modules.
@@ -63,7 +61,8 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(ROUTES),
+    MainModule
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.

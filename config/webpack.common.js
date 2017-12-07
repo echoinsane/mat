@@ -166,6 +166,11 @@ module.exports = function (options) {
           exclude: [helpers.root('src', 'styles')]
         },
 
+        {
+          test: /\.less$/,
+          use: ['to-string-loader', 'css-loader', 'less-loader']
+        },
+
         /**
          * To string and sass loader support for *.scss files (from Angular components)
          * Returns compiled css content as string

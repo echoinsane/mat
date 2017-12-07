@@ -1,0 +1,57 @@
+@import '../variables';
+
+:host {
+  display: block;
+  height: 386px;
+  padding-top: 68px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: @header-b;
+  background: url('./images/header-back-left.png') -53% 0 no-repeat,
+              url('./images/header-back-right.png') 153% 0 no-repeat;
+}
+
+.logo {
+  margin: 0 auto 10px;
+}
+
+.text {
+  font-size: 30px;
+  color: @header-text;
+  text-align: center;
+  margin-bottom: 47px;
+}
+
+.menu {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 45px;
+  font-size: 0;
+  text-align: center;
+  border-top: 2px solid #eeecec;
+  
+  &__item {
+    display: inline-block;
+    padding: 0 10px 6px;
+    
+    &_active, &:hover {
+      border-bottom: 2px solid @b;
+    }
+    
+    &_divider:hover {
+      border: none;
+    }
+    
+    & + & {
+      margin-left: 64px;
+    }
+  }
+  
+  &__link {
+    font-size: 20px;
+    font-family: @alter-font;
+    text-transform: uppercase;
+    letter-spacing: 3.4px;
+    cursor: pointer;
+  }
+}
