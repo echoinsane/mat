@@ -73,3 +73,15 @@ export const decorateModuleRef = _decorateModuleRef;
 export const ENV_PROVIDERS = [
   ...PROVIDERS
 ];
+
+export const firebase = {
+	production: false,
+	config: {
+		apiKey: "AIzaSyBPBQ6wRtp0aRqDr3PFVlttVJPIJnE6ck0",
+		authDomain: "tyulkanova-flowers.firebaseapp.com",
+		databaseURL: "https://tyulkanova-flowers.firebaseio.com",
+		projectId: "tyulkanova-flowers",
+		storageBucket: "tyulkanova-flowers.appspot.com",
+		messagingSenderId: "451827035151"
+	}
+};

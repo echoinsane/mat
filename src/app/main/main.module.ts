@@ -5,16 +5,17 @@ import {ProjectComponent} from "./project/project.component";
 import {UiHeaderModule} from "../components/uiHeader/uiHeader.module";
 
 @NgModule({
-  imports: [
-    UiHeaderModule,
-    CommonModule
-  ],
-  declarations: [
-    MainComponent,
-    ProjectComponent
-  ],
-  exports: [
-    MainComponent
-  ]
+	imports: [
+		UiHeaderModule,
+		CommonModule
+	],
+	declarations: [
+		MainComponent,
+		ProjectComponent
+	],
+	exports: [
+		MainComponent
+	]
 })
-export class MainModule {}
+export class MainModule {
+}

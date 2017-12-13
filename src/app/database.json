@@ -3,17 +3,17 @@
     "weddings": [{
       "header": "Свадьба Тамары и Кирилла",
       "description": "Место проведения: яхт-клуб «Водник»",
-      "image": "https://dummyimage.com/960x600/111/0edeed&text=whatsup",
+      "image": "/main/project-1.png",
       "small": false
     },
       {
         "header": "Свадьба Дарьи и Дмитрия",
-        "image": "https://dummyimage.com/960x600/111/0edeed&text=whatsup",
+        "image": "/main/project-2.png",
         "small": true
       },
       {
         "header": "Свадьба Александры и Александра",
-        "image": "https://dummyimage.com/960x600/111/0edeed&text=whatsup",
+        "image": "/main/project-3.png",
         "small": true
       }
     ],
