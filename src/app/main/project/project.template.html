@@ -1,13 +1,14 @@
-<div class="project" [class.project_small]="project.small">
-  <div class="image"
-       [class.image_small]="project.small"
-       [style.background-image]="'url(' + project.image + ')'"></div>
-  <div class="text">
-    <div class="header">
-      {{project.header}}
-    </div>
-    <div class="description">
-      {{project.description}}
-    </div>
-  </div>
+<div class="project" [class.project_small]="project.small" [@popIn]="isShow">
+	<div class="image"
+	     [class.image_small]="project.small"
+	     [style.background-image]="'url(' + project.image + ')'"></div>
+	<div class="text">
+		<div class="header">
+			{{project.header}}
+		</div>
+		<div class="description">
+			{{project.description}}
+		</div>
+	</div>
 </div>
+<loader *ngIf="loader"></loader>

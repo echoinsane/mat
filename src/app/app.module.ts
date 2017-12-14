@@ -14,6 +14,7 @@ import {RouterModule} from '@angular/router';
 import {MainModule} from "./main/main.module";
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from "angularfire2/database";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -65,6 +66,7 @@ type StoreType = {
 		AngularFireDatabaseModule,
 		FormsModule,
 		HttpModule,
+		BrowserAnimationsModule,
 		RouterModule.forRoot(ROUTES),
 		MainModule
 	],
