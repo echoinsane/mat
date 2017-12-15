@@ -1,85 +1,85 @@
 @import '../variables';
 
 :host {
-  display: block;
+	display: block;
 }
 
 .poster {
-  position: relative;
-  max-width: 1920px;
-  height: 700px;
-  padding-top: 238px;
-  box-sizing: border-box;
-  background: url('./images/main-poster.png') no-repeat top center;
-  background-size: cover;
-  text-align: center;
-  
-  &__panel {
-    display: inline-block;
-    padding: 8px;
-    background: rgba(10, 10, 10, 0.7);
-  }
-  
-  &__text {
-    padding: 35px 58px;
-    color: @f;
-    font-size: 62px;
-    border: 3px solid @f;
-  }
-  
-  &__dot {
-    font-size: 40px;
-    position: relative;
-    top: -4px;
-  }
+	position: relative;
+	max-width: 1920px;
+	height: 700px;
+	padding-top: 238px;
+	box-sizing: border-box;
+	background: url('./images/main-poster.png') no-repeat top center;
+	background-size: cover;
+	text-align: center;
+
+	&__panel {
+		display: inline-block;
+		padding: 8px;
+		background: rgba(10, 10, 10, 0.7);
+	}
+
+	&__text {
+		padding: 35px 58px;
+		color: @f;
+		font-size: 62px;
+		border: 3px solid @f;
+	}
+
+	&__dot {
+		font-size: 40px;
+		position: relative;
+		top: -4px;
+	}
 }
 
 .projects {
-  padding: 82px 0;
-  text-align: center;
-  
-  &__wrapper {
-    max-width: 1140px;
-    margin: 40px auto 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+	padding: 82px 0;
+	text-align: center;
+
+	&__wrapper {
+		max-width: 1140px;
+		margin: 40px auto 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 }
 
 .project {
-  width: 100%;
-  
-  &_small {
-    width: 550px;
-  }
-  
-  & + & {
-    margin-top: 40px;
-  }
+	width: 100%;
+
+	&_small {
+		width: 550px;
+	}
+
+	& + & {
+		margin-top: 40px;
+	}
 }
 
 .button {
-  border: 1px solid @main-header;
-  padding: 4px;
-  display: inline-block;
-  margin: 62px auto 0;
-  cursor: pointer;
-  
-  &__wrapper {
-    border: 1px solid @main-header;
-    font-family: @alter-font;
-    color: @b;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 28px 57px;
-    letter-spacing: 3.4px;
-    transition: all .3s ease;
-    
-    &:hover {
-      background: @main-header;
-      color: @f;
-    }
-  }
+	border: 1px solid @main-header;
+	padding: 4px;
+	display: inline-block;
+	margin: 62px auto 0;
+	cursor: pointer;
+
+	&__wrapper {
+		border: 1px solid @main-header;
+		font-family: @alter-font;
+		color: @b;
+		font-size: 20px;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 28px 57px;
+		letter-spacing: 3.4px;
+		transition: all .3s ease;
+
+		&:hover {
+			background: @main-header;
+			color: @f;
+		}
+	}
 }
