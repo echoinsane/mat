@@ -11,10 +11,10 @@
 <div class="projects">
   <ui-header text="Наши проекты" img="logo"></ui-header>
   <div class="projects__wrapper">
-    <project *ngFor="let project of projects"
-             [class.project_small]="project.small"
-             [project]="project"
-             class="project"></project>
+	  <project *ngFor="let project of projects"
+	           [class.project_small]="project.small"
+	           [project]="project"
+	           class="project"></project>
   </div>
   <div class="button">
     <div class="button__wrapper">

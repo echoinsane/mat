@@ -1,8 +1,8 @@
 import * as firebase from 'firebase';
-import {Observable} from "rxjs";
+import {Observable} from 'rxjs';
 import {Component, OnInit} from '@angular/core';
 import {IProject} from '../../model/IProject';
-import {AngularFireDatabase} from "angularfire2/database";
+import {AngularFireDatabase} from 'angularfire2/database';
 
 @Component({
 	selector: 'main',
@@ -10,7 +10,7 @@ import {AngularFireDatabase} from "angularfire2/database";
 	styleUrls: ['main.style.less']
 })
 export class MainComponent implements OnInit {
-	projects: IProject[];
+	public projects: IProject[];
 
 	constructor(private firebaseDatabase: AngularFireDatabase) {}
 
