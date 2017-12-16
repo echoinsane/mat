@@ -1,6 +1,8 @@
-<img [src]="item.image">
-<div class="text">
-	<span class="number">{{index + 1}}</span>
-	<div class="title">{{item.title}}</div>
-	<div class="description">{{item.description}}</div>
+<div class="wrapper" [ngClass]="{'wrapper_revert': isEven}">
+	<img class="image" [src]="item.image">
+	<div class="text" [ngClass]="{'text_revert': isEven}">
+		<span class="number">{{index + 1}}</span>
+		<div class="title">{{item.title}}</div>
+		<div class="description" [innerHtml]="item.description"></div>
+	</div>
 </div>

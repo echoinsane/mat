@@ -1,56 +1,66 @@
 @import '../variables';
 
 :host {
-  display: block;
+	display: block;
 }
 
 .divider {
-  width: 942px;
-  margin: 0 auto;
-  height: 43px;
-  position: relative;
-  
-  &:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: #eee;
-    position: absolute;
-    top: 21px;
-    left: 0;
-  }
-  
-  &__image {
-    position: relative;
-    margin: 0 auto;
-    background: @f;
-  }
+	width: 942px;
+	margin: 0 auto;
+	height: 43px;
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: #eee;
+		position: absolute;
+		top: 21px;
+		left: 0;
+	}
+
+	&__image {
+		position: relative;
+		margin: 0 auto;
+		background: @f;
+	}
 }
 
 .socials {
-  margin-top: 77px;
-  display: flex;
-  justify-content: center;
-  
+	margin-top: 77px;
+	display: flex;
+	justify-content: center;
+
 }
 
 .social {
-  
-  & + & {
-    margin-left: 36px;
-  }
+	transition: transform .2s ease-in-out;
+
+	& + & {
+		margin-left: 36px;
+	}
+
+	&:hover {
+		-webkit-transform: scale(0.9);
+		-moz-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+		-o-transform: scale(0.9);
+		transform: scale(0.9);
+		transition: transform .2s ease-in-out;
+	}
 }
 
 .block {
-  width: 100%;
-  height: 109px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #c9c9c9;
-  font-family: @alter-font;
-  font-size: 20px;
-  background: @b;
-  margin-top: 100px;
+	width: 100%;
+	height: 109px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #c9c9c9;
+	font-family: @alter-font;
+	font-size: 20px;
+	background: @b;
+	margin-top: 100px;
 }

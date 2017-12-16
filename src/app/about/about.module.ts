@@ -4,6 +4,7 @@ import { AboutComponent } from './about.component';
 import { UiHeaderModule } from '../components/uiHeader/uiHeader.module';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TimelineItemComponent } from './timeline/timelineItem/timelineItem.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
 	imports: [
@@ -13,7 +14,8 @@ import { TimelineItemComponent } from './timeline/timelineItem/timelineItem.comp
 	declarations: [
 		AboutComponent,
 		TimelineComponent,
-		TimelineItemComponent
+		TimelineItemComponent,
+		SliderComponent
 	],
 	exports: [
 		AboutComponent

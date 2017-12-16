@@ -1,27 +1,48 @@
 @import '../../../variables';
+@import '../../../mixins';
 
 @number-color: #dbdbdb;
 @number-size: 280px;
 @number-height: 65px;
+@number-margin-left: 15px;
 
 @title-size: 56px;
+@title-height: 53px;
+@title-margin-top: 85px;
 
 @description-size: 20px;
+@description-height: 32px;
+@description-margin-top: 25px;
 
-:host {
+.wrapper {
 	position: relative;
 	display: flex;
 	max-width: 1140px;
 	margin: 0 auto;
 	padding: 100px 0;
+
+	&_revert {
+		flex-direction: row-reverse;
+	}
+}
+
+.image {
+	-webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.11);
+	-moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.11);
+	box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.11);
 }
 
 .text {
 	position: relative;
 	margin-left: 60px;
+
+	&_revert {
+		margin: 0 60px 0 0;
+	}
 }
 
 .number {
+	.cantTouchThis();
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -29,19 +50,22 @@
 	font-size: @number-size;
 	line-height: @number-height;
 	color: @number-color;
-	margin-left: 15px;
+	margin-left: @number-margin-left;
 }
 
 .title {
 	position: relative;
 	font-size: @title-size;
+	line-height: @title-height;
 	color: @main-header;
-	margin-top: 77px;
+	margin-top: @title-margin-top;
 }
 
 .description {
-	margin-top: 25px;
+	position: relative;
+	margin-top: @description-margin-top;
 	font-family: @alter-font;
 	font-size: @description-size;
+	line-height: @description-height;
 	color: @b;
 }

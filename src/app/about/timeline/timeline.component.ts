@@ -1,5 +1,8 @@
 import {Component} from '@angular/core';
+
 import {items} from './items';
+
+import { ITimelineItem } from '../../../model/ITimelineItem';
 
 @Component({
 	selector: 'timeline',
@@ -7,5 +10,5 @@ import {items} from './items';
 	styleUrls: ['./timeline.style.less'],
 })
 export class TimelineComponent {
-	items = items;
+	items: ITimelineItem[] = items;
 }
