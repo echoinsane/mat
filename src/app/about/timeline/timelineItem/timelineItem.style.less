@@ -1,0 +1,47 @@
+@import '../../../variables';
+
+@number-color: #dbdbdb;
+@number-size: 280px;
+@number-height: 65px;
+
+@title-size: 56px;
+
+@description-size: 20px;
+
+:host {
+	position: relative;
+	display: flex;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+.text {
+	position: relative;
+	margin-left: 60px;
+}
+
+.number {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-style: italic;
+	font-size: @number-size;
+	line-height: @number-height;
+	color: @number-color;
+	margin-left: 15px;
+}
+
+.title {
+	position: relative;
+	font-size: @title-size;
+	color: @main-header;
+	margin-top: 77px;
+}
+
+.description {
+	margin-top: 25px;
+	font-family: @alter-font;
+	font-size: @description-size;
+	color: @b;
+}
