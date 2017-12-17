@@ -1,1 +1,13 @@
-123
+<div class="gallery">
+	<div #gallery class="gallery__inner">
+		<div *ngFor="let item of persons" class="slide">
+			<img [src]="item.image" alt="" class="image">
+			<div class="text">
+				<div class="name" [innerHtml]="item.name"></div>
+				<div class="position">{{item.position}}</div>
+			</div>
+		</div>
+	</div>
+</div>
+<button (click)="left()"><<</button>
+<button (click)="right()">>></button>
