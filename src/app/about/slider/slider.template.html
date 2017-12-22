@@ -1,5 +1,8 @@
 <div class="gallery">
-	<div #gallery class="gallery__inner">
+	<div #gallery
+	     class="gallery__inner"
+	     [@slide]="slideState"
+	     (@slide.done)="animationDone($event)">
 		<div *ngFor="let item of persons" class="slide">
 			<img [src]="item.image" alt="" class="image">
 			<div class="text">
@@ -9,5 +12,5 @@
 		</div>
 	</div>
 </div>
-<button (click)="left()"><<</button>
-<button (click)="right()">>></button>
+<button (click)="move('left')"><<</button>
+<button (click)="move('right')">>></button>

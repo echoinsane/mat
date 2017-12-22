@@ -1,46 +1,86 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 import { persons} from './persons';
 
 import { IPerson } from '../../../model/IPerson';
 
+const LEFT = 'left';
+const RIGHT = 'right';
+const STATIC = 'static';
+const WIDTH = '392px';
+const ANIMATION_TIME = '500ms';
+
 @Component({
 	selector: 'slider',
 	templateUrl: './slider.template.html',
 	styleUrls: ['./slider.style.less'],
+	animations: [
+		trigger('slide', [
+			state(STATIC, style({transform: 'translateX(0px)'})),
+			state(LEFT, style({transform: 'translateX(392px)'})),
+			state(RIGHT, style({transform: 'translateX(-392px)'})),
+			transition(`${STATIC} => ${LEFT}`, animate(`${ANIMATION_TIME} ease-in-out`)),
+			transition(`${STATIC} => ${RIGHT}`, animate(`${ANIMATION_TIME} ease-in-out`))
+		])
+	]
 })
 export class SliderComponent {
 	@ViewChild('gallery') gallery: ElementRef;
 	persons: IPerson[] = persons;
+	slideState = STATIC;
+
 	private currentPerson = [1, 2, 3];
 
-	left() {
-		const lastId = this.currentPerson[this.currentPerson.length - 1];
-		const firstId = this.currentPerson[0];
+	move(direction: string) {
+		const symbol = this.getSymbol(direction);
 
-		if (firstId === this.persons[0].id) {
-			this.persons.unshift(this.persons[this.persons.length - 1]);
-			this.currentPerson.unshift(this.persons[this.persons.length - 1].id);
-			this.currentPerson.pop();
+		if (this.slideState === STATIC) {
 
-			// this.gallery.nativeElement.style({transform: 'translateX(-350px)'});
-			this.persons.pop();
+			if (direction === LEFT) {
+				this.manageLeft();
+			}
+
+			if (direction === RIGHT) {
+				this.manageRight();
+			}
+
+			this.gallery.nativeElement.style[direction] = symbol + WIDTH;
+			this.slideState = direction;
 		}
-
-
 	}
 
-	right() {
-		const lastId = this.currentPerson[this.currentPerson.length - 1];
-		const firstId = this.currentPerson[0];
+	animationDone(event) {
+		if (event.toState === LEFT) {
+			this.persons.pop();
+			this.slideState = STATIC;
+			this.gallery.nativeElement.style.left = '0';
 
-		if (lastId === this.persons[this.persons.length - 1].id) {
-			this.persons.push(this.persons[0]);
-			this.currentPerson.push(this.persons[0].id);
-			this.currentPerson.shift();
-
-			// this.gallery.nativeElement.style({transform: 'translateX(-350px)'});
+			return;
+		} else if (event.toState === RIGHT) {
 			this.persons.shift();
+			this.slideState = STATIC;
+			this.gallery.nativeElement.style.right = '0';
 		}
+	}
+
+	private manageLeft() {
+		const last = this.persons[this.persons.length - 1];
+
+		this.persons.unshift(last);
+		this.currentPerson.unshift(last.id);
+		this.currentPerson.pop();
+	}
+
+	private manageRight() {
+		const first = this.persons[0];
+
+		this.persons.push(first);
+		this.currentPerson.push(first.id);
+		this.currentPerson.shift();
+	}
+
+	private getSymbol(direction: string): string {
+		return direction === LEFT ? '-' : '+';
 	}
 }
