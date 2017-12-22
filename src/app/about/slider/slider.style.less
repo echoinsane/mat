@@ -1,0 +1,57 @@
+@import '../../variables';
+
+@name-size: 32px;
+@name-height: 38px;
+
+@position-size: 20px;
+@position-height: 27px;
+@position-color: #979797;
+
+:host {
+	display: block;
+	margin-top: 44px;
+}
+
+.gallery {
+	width: 1175px;
+	height: 590px;
+	overflow-x: hidden;
+	margin: 0 auto;
+
+	&__inner {
+		position: relative;
+		display: block;
+		width: 10000px;
+		right: 0;
+		left: 0;
+	}
+}
+
+.slide {
+	display: inline-block;
+	width: 350px;
+	overflow: hidden;
+	-moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+	margin: 0 21px;
+}
+
+.text {
+	text-align: center;
+	padding: 25px 20px;
+}
+
+.name {
+	margin-bottom: 15px;
+	font-size: @name-size;
+	line-height: @name-height;
+	color: @b;
+}
+
+.position {
+	font-family: @alter-font;
+	font-size: @position-size;
+	line-height: @position-height;
+	color: @position-color;
+}
